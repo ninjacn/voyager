@@ -64,8 +64,8 @@
 </div>
 
 <?php
-if (\Illuminate\Support\Str::startsWith(Auth::user()->avatar, 'http://') || \Illuminate\Support\Str::startsWith(Auth::user()->avatar, 'https://')) {
-    $user_avatar = Auth::user()->avatar;
+if (Auth::user()->details && Auth::user()->details->avatar && (\Illuminate\Support\Str::startsWith(Auth::user()->details->avatar, 'http://') || \Illuminate\Support\Str::startsWith(Auth::user()->details->avatar, 'https://'))) {
+    $user_avatar = Auth::user()->details->avatar;
 } else {
     $user_avatar = Voyager::image(Auth::user()->avatar);
 }
