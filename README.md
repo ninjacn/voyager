@@ -99,3 +99,5 @@ php artisan voyager:admin your@email.com --create
 ```
 
 And you will be prompted for the user's name and password.
+
+test
